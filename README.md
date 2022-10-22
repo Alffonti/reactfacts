@@ -6,6 +6,8 @@ This project is part of the Scrimba [React](https://scrimba.com/learn/learnreact
 
 <img src='https://user-images.githubusercontent.com/69361901/197352649-d7c73a5c-9171-45a2-94ac-7f3be1c272b8.png' alt='ReactFacts screenshot' width='500px' text-align='center'>
 
+Live Site: https://reactfacts-by-alphfonti.netlify.app/
+
 ## What I learned in this project
 
 - React (composable and declarative)
