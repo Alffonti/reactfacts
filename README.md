@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# ReactFacts site
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is part of the Scrimba [React](https://scrimba.com/learn/learnreact) course.
 
-## Available Scripts
+## About The Project
 
-In the project directory, you can run:
+<img src='https://user-images.githubusercontent.com/69361901/197352649-d7c73a5c-9171-45a2-94ac-7f3be1c272b8.png' alt='ReactFacts screenshot' width='500px' text-align='center'>
 
-### `npm start`
+## What I learned in this project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React (composable and declarative)
+- JSX syntax (must import it to be able to used it)
+- ReactDOM (must import it to be able to used it)
+- Custom components
+- Parent and children components
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+1. Why do we need to `import React from "react"` in our files?
+React is what defines JSX
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. If I were to console.log(page) in index.js, what would show up?
+A JavaScript object. React elements that describe what React should
+eventually add to the real DOM (UI elements) for us.
 
-### `npm run build`
+3. What's wrong with this code:
+```
+const page = (
+    <h1>Hello</h1>
+    <p>This is my website!</p>
+)
+```
+We need our JSX to be nested under a single parent element
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. What does it mean for something to be "declarative" instead of "imperative"?
+Declarative means I can tell the computer WHAT to do 
+and expect it to handle the details. Imperative means I need
+to tell it HOW to do each step.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. What does it mean for something to be "composable"?
+We have small pieces that we can put together to make something
+larger/greater than the individual pieces.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+6. What is a React component?
+A function that returns React elements.
 
-### `npm run eject`
+7. What's wrong with this code?
+```
+function myComponent() {
+    return (
+        <small>I'm tiny text!</small>
+    )
+}
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+We need the name of the component in PascalCase (MyComponent)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+8. What's wrong with this code?
+```
+function Header() {
+    return (
+        <header>
+            <nav>
+                <img src="./react-logo.png" width="40px" />
+            </nav>
+        </header>
+    )
+}
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+ReactDOM.render(header(), document.getElementById("root"))
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+We need to create a new instance of a component by putting the name inside brackers `<Header() />`. 
 
-## Learn More
+Parent and children components
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Mental outline
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/69361901/197352914-9175c6d6-563f-4d0c-8b31-53a94409dd3a.png">
 
-### Code Splitting
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/69361901/197352915-af49f0bb-6b98-4303-95e7-984878e142eb.png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## What do I need to run React in my computer
 
-### Analyzing the Bundle Size
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/69361901/197352917-6b84dd4f-5936-4d09-9242-a3da1969fa79.png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/69361901/197352918-caeaca08-a489-46c3-88c0-c2ef195aef3c.png">
 
-### Making a Progressive Web App
+## Built with 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [React](https://reactjs.org/)
 
-### Advanced Configuration
+## Acknowledgements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Bob Ziroll](https://github.com/bobziroll)
